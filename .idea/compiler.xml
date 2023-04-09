@@ -13,4 +13,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="WebService.test" options="--add-exports com.azul.crs.client/com.azul.crs.digest=ALL-UNNAMED,ALL-UNNAMED" />
+    </option>
+  </component>
 </project>
