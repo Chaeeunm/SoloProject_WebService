@@ -3,6 +3,9 @@ package com.chaeeunm.webservice.domain.posts;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class PostsService {
@@ -24,6 +27,9 @@ public class PostsService {
         Posts verifidePosts = VerifyPosts(id);
         return new PostsDto.PostsResponsestDto(verifidePosts);
     }
+
+    //@Transactional(redOnly = true)
+    //st<PostsDto.PostsListResponseDto> findAllDesc
 
     private Posts VerifyPosts(Long id) {
         return postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시물이 없습니다 id = " + id));
