@@ -1,9 +1,8 @@
 package com.chaeeunm.webservice.domain.posts;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor
@@ -47,18 +46,33 @@ public class PostsDto {
 
     @Getter
     @NoArgsConstructor
-    public static class PostsResponsestDto {
+    public static class PostsResponseDto {
         private Long id;
         private String title;
         private String content;
         private String author;
 
         //posts객체를 넣으면 postResponseDto객체로 바꿔줌
-        public PostsResponsestDto(Posts entity) {
+        public PostsResponseDto(Posts entity) {
             this.id = entity.getId();
             this.author = entity.getAuthor();
             this.content = entity.getContent();
             this.title = entity.getTitle();
+        }
+    }
+
+    @Getter
+    public static class PostListResponseDto {
+        private Long id;
+        private String title;
+        private String author;
+        private LocalDateTime modifiedDate;
+
+        public PostListResponseDto(Posts entity) {
+            this.id = entity.getId();
+            this.author = entity.getAuthor();
+            this.title = entity.getTitle();
+            this.modifiedDate = entity.getModifiedDate();
         }
     }
 }

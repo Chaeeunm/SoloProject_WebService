@@ -29,9 +29,9 @@
         </tr>
         </thead>
         <tbody id="tbody">
-        {{#posts}}
+        {{#posts}} <!--posts 라는 리스트를 순회한다는 의미 -->
             <tr>
-                <td>{{id}}</td>
+                <td>{{id}}</td> <!-- List에서 뽑아낸 객체의 필드를 사용하겠다! -->
                 <td><a href="/posts/update/{{id}}">{{title}}</a></td>
                 <td>{{author}}</td>
                 <td>{{modifiedDate}}</td>
