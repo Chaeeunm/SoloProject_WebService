@@ -1,7 +1,6 @@
 {{>layout/header}}
 
 <!DOCTYPE HTML>
-
 <h1><img src="https://item.kakaocdn.net/do/49a292677e5b578a8985bb315c19700cf604e7b0e6900f9ac53a43965300eb9a" alt="My Image">
     멋쟁이들의 게시판 :)
     <img src="https://item.kakaocdn.net/do/49a292677e5b578a8985bb315c19700cf604e7b0e6900f9ac53a43965300eb9a" alt="My Image">
@@ -15,8 +14,8 @@
                 <a href="/logout" class="btn btn-info active" role="button">Logout</a>
             {{/userName}}
             {{^userName}}
-                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
-                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+                <button href="/oauth2/authorization/google" class="btn btn-success active" role="button", style="background-color: darksalmon;">Google Login</button>
+                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button", style="background-color: darkgreen">Naver Login</a>
             {{/userName}}
         </div>
     </div>
