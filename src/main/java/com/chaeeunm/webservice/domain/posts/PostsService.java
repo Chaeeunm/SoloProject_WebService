@@ -30,13 +30,14 @@ public class PostsService {
     }
 
     @Transactional
-    public void delete(Long id){
+    public void delete(Long id) {
         Posts posts = VerifyPosts(id);
         postsRepository.delete(posts);
     }
 
-    @Transactional//(readOnly = true) //readOnly=turn를 주면 트랜젝션 범위는 유지하되, 조회 기능만 남겨두어 조회 속도가 개선! 등록,수정,삭제 기능이 없는 서비스 메소드에서 사용하면 좋다
-    public List<PostsDto.PostListResponseDto> findAllDesc(){
+    @Transactional
+//(readOnly = true) //readOnly=turn를 주면 트랜젝션 범위는 유지하되, 조회 기능만 남겨두어 조회 속도가 개선! 등록,수정,삭제 기능이 없는 서비스 메소드에서 사용하면 좋다
+    public List<PostsDto.PostListResponseDto> findAllDesc() {
         return postsRepository.findAllDes().stream()
                 .map(PostsDto.PostListResponseDto::new)
                 .collect(Collectors.toList());
