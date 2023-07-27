@@ -1,5 +1,14 @@
+
 spring:
+  spring:
+    http:
+      encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
   profiles:
     active:
      -prod
      -local
+
+
