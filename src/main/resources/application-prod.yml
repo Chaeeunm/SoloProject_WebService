@@ -15,4 +15,3 @@ spring:
           lob:
             non_contextual_creation: true
         format_sql: true  # (3) SQL pretty print
-        dialect: org.hibernate.spatial.dialect.mysql.MySQL56InnoDBSpatialDialect
