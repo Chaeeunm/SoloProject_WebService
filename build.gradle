@@ -19,6 +19,7 @@ test { // (2)
 
 dependencies {
     implementation 'de.adorsys.keycloak:keycloak-clientregistration-provider:3.0'
+    implementation 'mysql:mysql-connector-java:8.0.28'
     //compileOnly('org.springframework.boot:spring-boot-starter-oauth2-client')//클라이언트 입장에서 소셜 기능 구현시 필요
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation('org.springframework.boot:spring-boot-starter-mustache')
